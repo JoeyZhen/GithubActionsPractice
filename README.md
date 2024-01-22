@@ -1,0 +1,2 @@
+# GithubActionsPractice
+Learning github actions

@@ -5,7 +5,7 @@ on: push
 jobs: 
     Selenium_Test_Job-1:
       name: Selenium Test Job
-      runs-on: ubuntu-latest
+      runs-on: windows-latest
 
       steps:
         - run: echo "This is running inside a ${{ runner.os }} server in GitHub"
@@ -16,4 +16,6 @@ jobs:
           run: |
               mkdir newfolder
               ls -l
+
+          shell: bash
           

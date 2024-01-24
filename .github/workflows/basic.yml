@@ -14,6 +14,6 @@ jobs:
         - run: echo "This repo is ${{ github.repository }} .."
         - name: Run a inline script
           run: |
-              mkfir newfolder
+              mkdir newfolder
               ls -l
           

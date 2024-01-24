@@ -20,5 +20,12 @@ jobs:
         - name: Run a script file from repo
           run: sh ./run.sh
           shell: pwsh
+
+    Selenium_test_Job-2:
+        name: Selenium Test Job 2
+        runs-on: ubuntu-latest
+
+        steps: 
+          - run: echo "This is from second job"
         
           

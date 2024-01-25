@@ -19,9 +19,12 @@ jobs:
               ls -l
           shell: bash
         - name: Run a script file from repo
-          
+          if: ${{ always() }}
           run: sh ./run.sh
           shell: pwsh
+        - name: Execute during failure
+          if: ${{ failure() }}
+          run: echo "One of the step seems failed"
 
     Selenium_test_Job-2:
         name: Selenium Test Job 2

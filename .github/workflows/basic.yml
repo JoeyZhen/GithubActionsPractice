@@ -15,7 +15,6 @@ jobs:
         - name: Run a inline script
           run: |
               mkdir newfolder
-              sdasdasd
               ls -l
           shell: bash
         - name: Run a script file from repo

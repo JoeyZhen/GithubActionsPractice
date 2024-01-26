@@ -6,6 +6,7 @@ jobs:
     Selenium_Test_Job-1:
       name: Selenium Test Job
       runs-on: windows-latest
+      env: SELENIUM_DRIVER: 'RemoteWebDriver'
 
       steps:
         - run: echo "This is running inside a ${{ runner.os }} server in GitHub"

@@ -29,21 +29,22 @@ public class seleniumTest {
         driver.manage().window().maximize();
     }
 
-//    @Test
-//    public void Login()  throws InterruptedException{
-//          cmsLogin c = new cmsLogin(driver);
+    @Test
+    public void Login()  throws InterruptedException{
+          cmsLogin c = new cmsLogin(driver);
+
 //          c.searchGoogle();
 //          String testTitle = "Tools QA";
 //          String originalTitle = driver.getTitle();
 //          Assert.assertEquals(originalTitle, testTitle);
-//    }
-
-    @Test
-    public void clickRateTab()  throws InterruptedException{
-        cmsLogin c = new cmsLogin(driver);
-        c.searchGoogle();
-        c.searchMerchantRate();
     }
+
+//    @Test
+//    public void clickRateTab()  throws InterruptedException{
+//        cmsLogin c = new cmsLogin(driver);
+//        c.searchGoogle();
+//        c.searchMerchantRate();
+//    }
     @AfterMethod
     public void afterMethod() {
         driver.quit();

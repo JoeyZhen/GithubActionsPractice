@@ -16,7 +16,12 @@ public class seleniumTest {
         System.out.println("Starting Test On Chrome Browser");
         String baseUrl = "https://cms.staging.fluzapp.com";
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.setAcceptInsecureCerts(true);
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--start-maximized");
+        options.addArguments("--remote-debugging-pipe");
+        options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
 
         driver = new ChromeDriver(options);

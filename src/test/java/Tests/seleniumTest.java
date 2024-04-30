@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,9 +17,10 @@ public class seleniumTest {
 
     @BeforeMethod
     public void beforeMethod() {
+
         System.out.println("Starting Test On Chrome Browser");
         String baseUrl = "https://cms.staging.fluzapp.com";
-        ChromeOptions options = new ChromeOptions();
+        FirefoxOptions options = new FirefoxOptions();
         options.setAcceptInsecureCerts(true);
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
@@ -26,10 +28,11 @@ public class seleniumTest {
         options.addArguments("--remote-debugging-pipe");
         options.addArguments("--disable-gpu");
         options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+//        driver = new ChromeDriver(options);
+        driver = new FirefoxDriver(options);
         driver.get(baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Test

@@ -20,16 +20,16 @@ public class seleniumTest {
         String baseUrl = "https://cms.staging.fluzapp.com";
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
-        options.addArguments("--headless=new");
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--start-maximized");
         options.addArguments("--remote-debugging-pipe");
         options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.get(baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Test

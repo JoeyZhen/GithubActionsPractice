@@ -36,7 +36,7 @@ public class cmsLogin {
     }
 
     public void searchMerchantRate() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
         wait.until(ExpectedConditions.visibilityOfElementLocated(appIntegrationTab));
         driver.findElement(appIntegrationTab).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(merchantRateTab));

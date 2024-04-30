@@ -17,6 +17,7 @@ public class seleniumTest {
         String baseUrl = "https://cms.staging.fluzapp.com";
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
 
         driver = new ChromeDriver(options);
         driver.get(baseUrl);

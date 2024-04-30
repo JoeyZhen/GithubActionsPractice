@@ -19,10 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install Firefox
-      uses: browser-actions/setup-firefox@latest
-    - name: Install Geckodriver
-      run: yarn add geckodriver
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:

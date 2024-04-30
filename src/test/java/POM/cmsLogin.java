@@ -24,8 +24,9 @@ public class cmsLogin {
     }
 
     public void searchGoogle() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
         driver.findElement(loginButton).click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));
         wait.until(ExpectedConditions.visibilityOfElementLocated(inputUsername));
         driver.findElement(inputUsername).sendKeys("doppler-contributor@fluz.app");
         driver.findElement(nextButton).click();

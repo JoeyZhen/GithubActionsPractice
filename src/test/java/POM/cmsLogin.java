@@ -29,9 +29,11 @@ public class cmsLogin {
         driver.findElement(loginButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(inputUsername));
         driver.findElement(inputUsername).sendKeys("doppler-contributor@fluz.app");
+        Thread.sleep(5000);
         driver.findElement(nextButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(inputPassword));
         driver.findElement(inputPassword).sendKeys("wiwwK5Zhc[7<VWAI]<RH");
+        Thread.sleep(5000);
         driver.findElement(nextButton).click();
     }
 

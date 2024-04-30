@@ -32,7 +32,8 @@ public class seleniumTest {
     @Test
     public void Login()  throws InterruptedException{
           cmsLogin c = new cmsLogin(driver);
-
+        String originalTitle = driver.getTitle();
+        System.out.println(originalTitle);
 //          c.searchGoogle();
 //          String testTitle = "Tools QA";
 //          String originalTitle = driver.getTitle();

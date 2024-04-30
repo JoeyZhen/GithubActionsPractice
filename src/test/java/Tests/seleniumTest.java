@@ -12,7 +12,6 @@ public class seleniumTest {
     @BeforeMethod
     public void beforeMethod() {
         System.out.println("Starting Test On Chrome Browser");
-//        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/chromedriver.exe");
         String baseUrl = "https://cms.staging.fluzapp.com";
         driver = new FirefoxDriver();
         driver.get(baseUrl);

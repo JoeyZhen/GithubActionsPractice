@@ -1,12 +1,16 @@
 package POM;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
+
+import static Tests.seleniumTest.test;
 
 public class cmsLogin {
     WebDriver driver;
@@ -24,17 +28,18 @@ public class cmsLogin {
     }
 
     public void searchGoogle() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton));
         driver.findElement(loginButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(inputUsername));
         driver.findElement(inputUsername).sendKeys("doppler-contributor@fluz.app");
-        Thread.sleep(5000);
         driver.findElement(nextButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(inputPassword));
         driver.findElement(inputPassword).sendKeys("wiwwK5Zhc[7<VWAI]<RH");
-        Thread.sleep(5000);
         driver.findElement(nextButton).click();
+        String testTitle = "Sign in - Google Accounts";
+        String originalTitle = driver.getTitle();
+        Assert.assertEquals(originalTitle, testTitle);
     }
 
     public void searchMerchantRate() throws InterruptedException {
@@ -51,6 +56,10 @@ public class cmsLogin {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(sumbitButton));
         driver.findElement(sumbitButton).click();
+
+        String testTitle = "FluzCms";
+        String originalTitle = driver.getTitle();
+        Assert.assertEquals(originalTitle, testTitle);
     }
 
 
